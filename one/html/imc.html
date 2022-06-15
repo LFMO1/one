@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="funcoes.js">
+
+        var nome =prompt("digite o seu nome")
+        var altura= parseInt(prompt("digite sua altura"))
+        var peso = parseInt(prompt("digite seu peso"))
+
+        let imc = imc(altura, peso)
+
+        if(imc<18.5){
+            mostrar("seu peso esta abaixo da media")
+        }else if(imc>35){
+            mostrar("seu peso esta a cima da media")
+        }else{
+            mostrar("seu peso esta na media")
+        }
+
+
+
+    </script>
+</body>
+</html>

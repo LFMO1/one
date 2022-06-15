@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="funcoes.js">
+        var vitorias = parseInt( prompt("digite as vitorias"))
+        var empates = parseInt( prompt("digite os empates"))
+
+
+        var pontos = vitorias*3+empates
+
+        mostrar("seu times tem: "+pontos+" pontos")
+
+        if(pontos>28){
+            mostrar("seu time esta merlhor que o ano passado")
+        }else if( pontos<28){
+            mostrar("seu time esta pior que o ano passado")
+        }else{
+            mostrar("seu time esta igual ao ano passado")
+        }
+
+    </script>
+</body>
+</html>
