@@ -8,14 +8,37 @@ botaoAdicionar.addEventListener("click", function(event){
     
     let pacienteTR=montaTR(paciente)
 
+    let erro = validaPaciente(paciente)
+
+    if(erro.length>0){
+        exibeMensagemDeErro(erro);
+        mensagemErro.textContent=erro
+        return;
+    }
+
     
 
     let tabela = document.querySelector("#tabela-pacientes")
     tabela.appendChild(pacienteTR);
 
     form.reset()
+    let mensagemErro=document.querySelector("#mensagem-erro")
+    mensagemErro.innerHTML=""
     
 });
+
+function exibeMensagemDeErro(erro){
+    let ul = document.querySelector("#mensagem-erro")
+    ul.innerHTML=""
+
+    erro.array.forEach(function(erro) {
+        let li=document.createElement("li")
+        li.textContent=erro
+        ul.appendChild(li)
+        
+    });
+
+}
 
 function ObtemDadosDoPaciente(form){
 
@@ -52,4 +75,33 @@ function montaTD(dado,classe){
     td.classList.add(classe)
 
     return td;
+}
+
+function validaPaciente(paciente){
+   
+    let erros= []
+
+    if(paciente.nome.length==0){
+        erros.push("insira um nome")
+    }
+    
+    if(!validaPeso(paciente.peso)){
+        erros.push("peso invalido")
+    }
+    
+    if(!validaAltura(paciente.altura)){
+        erros.push("altura invalida")
+    }
+
+    if(paciente.peso.length==0){
+        erros.push("insira a gordura ")
+    }
+    if(paciente.altura.length==0){
+        erros.push("insira a gordura ")
+    }
+    if(paciente.gordura.length==0){
+        erros.push("insira a gordura ")
+    }
+
+    return erros
 }
