@@ -5,9 +5,7 @@ botaoAdicionar.addEventListener("click", function(event){
     let form=document.querySelector("#form-adiciona")
     var paciente=    ObtemDadosDoPaciente(form)
     
-    
-    let pacienteTR=montaTR(paciente)
-
+   
     let erro = validaPaciente(paciente)
 
     if(erro.length>0){
@@ -17,15 +15,23 @@ botaoAdicionar.addEventListener("click", function(event){
     }
 
     
-
-    let tabela = document.querySelector("#tabela-pacientes")
-    tabela.appendChild(pacienteTR);
+    adicionaPacienteNaTabela(paciente)
+    
 
     form.reset()
     let mensagemErro=document.querySelector("#mensagem-erro")
     mensagemErro.innerHTML=""
     
 });
+
+function adicionaPacienteNaTabela(paciente){
+     
+    let pacienteTR=montaTR(paciente)
+    let tabela = document.querySelector("#tabela-pacientes")
+    tabela.appendChild(pacienteTR);
+
+
+}
 
 function exibeMensagemDeErro(erro){
     let ul = document.querySelector("#mensagem-erro")
