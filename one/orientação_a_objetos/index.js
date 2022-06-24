@@ -1,22 +1,37 @@
 import {Cliente} from "./Cliente.js";  //possibilita chamar classes de outros arquivos 
-import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaCorrente } from "./contas/ContaCorrente.js";
+import { ContaPoupanca } from "./contas/ContaPoupança.js";
+import { ContaSalario } from "./contas/ContaSalario.js";
+import { Gerente } from "./funcionarios/Gerente.js";
+import { SistemaDeAutenticacao } from "./SistemaDeAutenticacao.js";
+import { Diretor } from "./funcionarios/Diretor.js";
 
 const cliente1 =new Cliente("Ricardo", 111223233 ) // isso faz como que os atributos de "Cliente" sejam colocados em uma variavel
 // com o "constructor" no arquivo "Cliente.js" eu posso fazer diretamente dentro dos parentes a atribuição de valores
-
-const cliente2 = new Cliente("Alice", 444444444)
 //isso é uma referencia ao objeto guardado na memoria e não o objeto em sim
 
 
-const contaCorrenteRicardo= new ContaCorrente(1001, cliente1)
+const diretor =  new Diretor("Rodrigo", 10000, 12345678900);
+diretor.cadastrarSenha("123456")
+const gerente =  new Gerente("Ricardo",  5000, 12378945601);
+gerente.cadastrarSenha("123");
 
-const contaCorrenteAlice= new ContaCorrente(102, cliente2);
+const cliente = new Cliente("Lais", 78945612379, "456");
+const gerenteEstaLogado = SistemaDeAutenticacao.login(gerente, "123");
+const diretorEstaLogado = SistemaDeAutenticacao.login(diretor, "123456");
 
-contaCorrenteRicardo.depositar(30)
+
+const clienteEstaLogado = SistemaDeAutenticacao.login(cliente, "456");
+
+console.log(gerenteEstaLogado, diretorEstaLogado, clienteEstaLogado);
 
 
 
-console.log(ContaCorrente.numerodeContas)
+
+
+
+
+
 
 
 

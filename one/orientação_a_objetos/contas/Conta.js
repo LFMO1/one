@@ -1,10 +1,13 @@
-import { Cliente } from "./Cliente.js";
-
-export class ContaCorrente{ //classes tambem podem ter comportamentos 
-    static numerodeContas=0; //static deixa o objeto estatico 
-    agencia;
-    _saldo =0; //# objeto privado pelo node
-    _cliente   // objeto privado pela comunidade JS
+export class Conta{
+    constructor( saldoInicial, cliente, agencia){
+        if(this.constructor == Conta){
+           throw new Error("não pode instanciar um tipo conta") // throw cria um erro e new Error é uma classe do proprio js que lança erros
+        }
+        this._saldo = saldoInicial;  //assim eu estou criando objetos sem ter que crialos fora do constructor
+        this._cliente = cliente;
+        this._agencia = agencia;
+        
+    }
 
     get saldo(){ //com o get fica impossivel fazer uma atribuição direta. O get sempre ira retornar um valor não altera-lo
         return this._saldo;
@@ -22,27 +25,31 @@ export class ContaCorrente{ //classes tambem podem ter comportamentos
         return this._cliente
     }
 
-    constructor(agencia, cliente){
-        this.agencia = agencia
-        this.cliente = cliente
-        ContaCorrente.numerodeContas++; //assim você não pega apenas da conta atual e sim de todas as contas
-
+    //metodo abstrato
+    sacar(valor){ //função dentro de uma classe
+        throw new Error("não pode ser chamado diretamente, você esqueceu de colocar o metodo sacar em alguma conta")
     }
 
-
-
-    sacar(valor){ //função dentro de uma classe
-        if(this._saldo>=valor){ //this é usado para pegar o saldo desta conta corrente. Sendo assim possivel acessar qualquer conta corrente
-            this._saldo-=valor;
+    _sacar(valor, taxa){
+        const valorSacado = taxa *valor
+        if(this._saldo>=valorSacado){ //this é usado para pegar o saldo desta conta corrente. Sendo assim possivel acessar qualquer conta corrente
+            this._saldo-=valorSacado;
             console.log("seu novo saldo é de "+ this._saldo)
+            return valorSacado
             
         }else{
             console.log("não é possivel sacar esse valor")
+            return 0
         }
 
     }
 
+
     depositar(valor){
+        throw new Error("não pode ser chamado diretamente, você esqueceu de colocar o metodo sacar em alguma conta")
+    }
+    
+    _depositar(valor){
         if(valor>0){
             this._saldo+=valor;
             console.log("seu novo saldo é de "+ this._saldo)
@@ -55,5 +62,5 @@ export class ContaCorrente{ //classes tambem podem ter comportamentos
         const valorSacado = this.sacar(valor) //tirando o valor de uma conta
         conta.depositar(valorSacado) //colocando o valor em outra conta 
 
-    }
+    }  
 }
