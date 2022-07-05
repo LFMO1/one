@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="validacao-doguito-main/assets/css/base/_reset.css">
+    <link rel="stylesheet" href="validacao-doguito-main/assets/css/base/base.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="validacao-doguito-main/assets/img/doguito.svg" class="img_cabecalho">
+        <h1 class="titulo-cabecalho">PetShop</h1>
+
+    </header>
+    <main>
+        <form>
+            <h2>Complete seu cadastro</h2>
+            <section>
+                <h3>Informações Basicas</h3>
+                <input type="text" required placeholder="Nome">
+                <input type="email" required placeholder="Email">
+                <input type="password" minlength="6" required placeholder="Senha">
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z)(?=.*[0-9](?!.*[!@#$%¨&*].{6,16}$" title="">
+            </section>
+            
+            <section>
+                <h3>Informações Pessoais</h3>
+                <input type="date" required placeholder="data de nascimento" id="nascimento" data-tipo="dataNascimento">
+            </section>
+
+
+        </form>
+    </main>
+    <footer></footer>
+
+    <script src="script.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 1rem;
+}
+
+.img_cabecalho{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-cabecalho{
+    font-family: var(--fonte-familia-logo);
+    font-size: var(--fonte-tamanho-logo);
+    margin-bottom: 1rem;
+}
+
+section{
+    width: 940px;
+    
+}
+
+h2,h3{
+    margin-right: 30%;
+    margin-bottom: 5px;
+}
+
+input{
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 30%;
+    width: 50%;
+    height: 30px;
+    border-radius: 5%;
+}
