@@ -1,0 +1,47 @@
+\d = qualquer digito
+{"numero"} =quatidade de vezes que ele é repetido
+? = faz com que o simbulo anterior não seja obrigatorio (zero ou uma vez)
+
+\d na verdade é um atalho para [0-9]
+
+\w =[A-Za-z0-9_]
+
+[] =define uma classe de caracteries. Exemplo [-.]? (pode haver hifem ou ponto) (não precisa da barra, para o ponto ter valor de ponto)
+
+\s = espaços, tabs etc
+
++ = 1 ou mais vezes. Exemplo \s+ (quer diser que pode haver mais de um espaço ou tab)
+{n,} =no minimo n de vezes
+{n,m} = no minimo n, nom maximo m vezes
+
+classe de letras maiusculas [A-Z]
+
+* = zero ou mais vezes
+
+ancoras = uma forma de encontrar uma posição dentro do texto
+
+\b = exemplo de uso. \bde\de ele achara todas as palavra "de" no texto (somente se houve apenas "de" na palavra)
+
+
+Exemplo:
+1.[0123]?\d\s+de\s+[A-Z][a-zç]{3,8}\s+de\s[12]\d{3}
+[0123]? pode aparecer esses numero ou não
+\d digitos de [1-9]
+\s espaço ou tab
++ um espaço ou mais
+de palavra
+[A-Z] letras maiusculas
+[a-zç] letras mininusculas
+{3,8} pode ir de 3 até 8
+
+exercicios
+1. criando uma regex para achar <code> ou </code>
+No <code>for</code>, o valor de <code>i</code> começa de zero e é incrementado a cada volta enquanto <code>i < 10</code>, portando o bloco de código do for é executado 10 vezes.
+</?code>
+
+2.KMG-8089
+[A-Z]{3}-\d{4}
+
+3.BALEIRO GARROTE SERROTE GOLEIRO ROTEIRO 
+apenas pegar GARROTE SERROTE ROTEIRO
+[A-Z]*ROT[A-Z]+
