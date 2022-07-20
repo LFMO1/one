@@ -22,6 +22,10 @@ ancoras = uma forma de encontrar uma posição dentro do texto
 
 \b = exemplo de uso. \bde\de ele achara todas as palavra "de" no texto (somente se houve apenas "de" na palavra)
 
+^ = ancora de que certa coisa é obrigada no inicio do texto (antes da palavra)
+
+$ = ancora de que certa coisa é obrigada no final do texto (depois da palavra
+
 
 Exemplo:
 1.[0123]?\d\s+de\s+[A-Z][a-zç]{3,8}\s+de\s[12]\d{3}
