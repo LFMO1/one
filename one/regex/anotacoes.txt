@@ -24,7 +24,9 @@ ancoras = uma forma de encontrar uma posição dentro do texto
 
 ^ = ancora de que certa coisa é obrigada no inicio do texto (antes da palavra)
 
-$ = ancora de que certa coisa é obrigada no final do texto (depois da palavra
+$ = ancora de que certa coisa é obrigada no final do texto (depois da palavra)
+
+para referenciar a um grupo você precisara /\1 para pegar o primeiro grupo
 
 
 Exemplo:
