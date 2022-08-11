@@ -1,0 +1,12 @@
+o flex-grow pega os ou o item/s e estica até o final do container.
+Exemplo: há 4 divs e foi colocado um flex-grow de 1, então todas as divs receberão numeros iguais na divisão para preencher esse container
+Exemplo: há 4 divs e foi colocado flex-grow em todas, mas na primeira div foi colocado um flex-grow de 2 e as outras apenas 1, assim o navegador somou 5 flex-grows e deu duas partes para a primeira div, pois ela tem um flex-grow superior
+
+flex-shrink faz a div diminuir em relação as outras.
+Exemplo:  (tela tamanho 100px, com a primra div com uma flex-shrink de 2 e as outras tem flex-shrink 1 (tamanho base das divs é de 50)) O navegador fara a seguinte conta 100/5 dando 20. Como a primeira div tem um flex-shrink de 2 ela diminura 2 vezes mais desses 20px (50-40=10) enquantos as outras divs diminuiem apenas 20px pois tem um flex-shrink 1
+flex-shrink 0 não deixa os elementos diminuirem
+
+
+flex é a junção do flex-grow com o flex-shrink. Pode colocar o flex-basis como terceiro argumento no flex
+
+flex-basis é basicamente um width   
