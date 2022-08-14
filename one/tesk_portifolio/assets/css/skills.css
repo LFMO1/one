@@ -1,0 +1,22 @@
+#skills{
+    margin-top: 3rem;
+}
+
+.skills__titulo{
+    margin-left: 3rem;
+}
+
+.skills__lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    margin-left: 2rem;
+    
+}
+
+.skills__itens{
+    list-style-type: circle;
+    margin-left: 3rem;
+
+}

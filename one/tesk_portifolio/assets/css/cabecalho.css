@@ -1,0 +1,28 @@
+.cabecalho{
+    height: 100px;
+    background-color: #DCDCDC;
+    display: flex;
+    font-size: 17px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+    
+}
+
+.navegacao{
+    width: 50%;
+}
+.menu{
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.menu__itens{
+    color: black;
+    text-decoration: none; 
+}
+
+.menu__itens:hover{
+    font-weight: bold;
+}

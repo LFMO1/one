@@ -1,0 +1,38 @@
+.apresentacao{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    
+}
+
+.apresentacao__titulo{
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.apresentacao__subTitulo{
+    font-size: 25px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.apresentacao__imagem{
+   width: 18rem;
+   height: 18em;
+   border-radius: 100%;
+}
+
+.apresentacao__lista{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.apresentacao__link{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+}

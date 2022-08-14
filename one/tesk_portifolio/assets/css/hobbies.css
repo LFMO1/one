@@ -1,0 +1,10 @@
+#hobbies{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    justify-content: space-between;
+    width: 65%;
+}
+
