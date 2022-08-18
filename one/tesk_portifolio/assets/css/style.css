@@ -3,3 +3,37 @@ body{
     background-color: #FFFFF0;
 }
 
+main{
+    margin-left: 3rem;
+}
+
+section{
+    margin-top: 2rem;
+}
+
+.descricao{
+    width: 65%;
+}
+.conteudo{
+    font-size: 18px;
+    color: black;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.titulos{
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    margin-left: 20px;
+}
+
+.itens{
+    list-style-type: circle;
+}

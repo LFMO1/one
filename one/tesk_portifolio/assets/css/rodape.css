@@ -1,0 +1,11 @@
+.rodape{
+    background-color: #DCDCDC;
+    height: 5rem;
+}
+
+.rodape_lista{
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
